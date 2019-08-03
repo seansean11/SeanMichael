@@ -24,14 +24,6 @@ var DATA = [{
     y: 90
   },
   {
-    x: "Spanish",
-    y: 80
-  },
-  {
-    x: "CSS/HTML",
-    y: 90
-  },
-  {
     x: "Node.js",
     y: 80
   },
@@ -40,28 +32,32 @@ var DATA = [{
     y: 60
   },
   {
+    x: "Running",
+    y: 60
+  },
+  {
+    x: "CSS/HTML",
+    y: 90
+  },
+  {
+    x: "Spanish",
+    y: 80
+  },
+  {
     x: "AngularJS",
     y: 70
   },
   {
-    x: "UI/UX Design",
-    y: 60
+    x: "FP",
+    y: 45
   },
   {
-    x: "WordPress",
-    y: 85
+    x: "UI/UX Design",
+    y: 65
   },
   {
     x: "PHP",
-    y: 60
-  },
-  {
-    x: "Juggling",
     y: 40
-  },
-  {
-    x: "Running",
-    y: 20
   }]
 },
 {
@@ -77,14 +73,6 @@ var DATA = [{
     y: 90
   },
   {
-    x: "Spanish",
-    y: 80
-  },
-  {
-    x: "CSS/HTML",
-    y: 65
-  },
-  {
     x: "Node.js",
     y: 80
   },
@@ -93,24 +81,32 @@ var DATA = [{
     y: 100
   },
   {
+    x: "Running",
+    y: 90
+  },
+  {
+    x: "CSS/HTML",
+    y: 55
+  },
+  {
+    x: "Spanish",
+    y: 60
+  },
+  {
     x: "AngularJS",
     y: 70
+  },
+  {
+    x: "FP",
+    y: 80
   },
   {
     x: "UI/UX Design",
     y: 60
   },
   {
-    x: "WordPress",
-    y: 10
-  },
-  {
     x: "PHP",
     y: 30
-  },
-  {
-    x: "Running",
-    y: 60
   }]
 }];
 
