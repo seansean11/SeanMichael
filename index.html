@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="fade">
+<head>
+    <meta charset="UTF-8">
+    <title>Sean Michael</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Sean Michael - Software Engineer specializing in front end development">
+    <meta property="twitter:account_id" content="197972911">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@senorsean11">
+    <meta name="twitter:creator" content="@senorsean11">
+    <meta property="og:url" content="http://seanmichael.me/index.html">
+    <meta property="og:title" content="Sean Michael">
+    <meta name="google-site-verification" content="9orH8OTUQl4dgdk3M9vwgjJuYkdrIpLW94sSx7yQKwo" />
+    <style type="text/css">
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+        }
+        html {
+            border-left: 6px solid #95e757;
+            -webkit-transition: 0.3s opacity;
+            -o-transition: 0.3s opacity;
+            transition: 0.3s opacity;
+            opacity: 1;
+        }
+        .wf-loading,
+        .fade {
+            opacity: 0;
+        }
+        body {
+            background: #fff;
+            font-family: 'nimbus-sans', helvetica, sans-serif;
+            position: relative;
+            padding: 1.5em;
+        }
+        body:before {
+            content: '';
+            border-left: 6px solid #95e757;
+            height: 100%;
+            display: block;
+            position: fixed;
+            left: 0; top: 0;
+        }
+        svg {
+            display: block;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        h1 {
+            font-weight: 900;
+            font-size: 5em;
+            line-height: .7;
+            letter-spacing: -4px;
+            padding-top: 20px;
+            color: #20d0ad;
+            background: -webkit-linear-gradient(#95e757, #20d0ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @media screen and (min-width: 500px) {
+            h1 {
+                letter-spacing: -8px;
+                font-size: 7em;
+            }
+        }
+        h2 {
+            font-weight: 900;
+            font-size: 3em;
+        }
+        h3,
+        .subtitle {
+            font-weight: 600;
+            font-size: 1.4em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0 .2em;
+        }
+        @media screen and (min-width: 500px) {
+          h3,
+          .subtitle {
+            font-size: 1.9em;
+          }
+        
+        }
+        p {
+            line-height: 1.6;
+            padding: .5em;
+            max-width: 500px;
+        }
+        ul {
+            list-style: none;
+            overflow: hidden;
+            margin: 0;
+            padding-left: 0;
+        }
+        .social {
+            padding-bottom: 3em;
+        }
+        li {
+            float: left;
+            width: 46px;
+            height: 46px;
+            background-size: contain;
+            display: block;
+            margin-left: .5em;
+        }
+        li:first-child {
+            margin-left: 0;
+        }
+        .skills-interests {
+            color: #000;
+            font-family: 'nimbus-sans', helvetica, sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+            position: fixed;
+            top: 1.5em; right: 1.5em;
+            display: none;
+            padding: .5em .5em .2em;
+            border-radius: 10px;
+        }
+        @media screen and (min-width: 500px) {
+            .skills-interests {
+                display: inline-block;
+            }
+
+            .skills-interests:before {
+                content:'Skills + Interests';
+                background-color: #fcae5c;
+                position: absolute;
+                left: 0; top: 0;
+                opacity: 0;
+                display: inline-block;
+                border-radius: 10px;
+                padding: .5em .5em .2em;
+                -webkit-transform: scale(.9);
+                -ms-transform: scale(.9);
+                -o-transform: scale(.9);
+                transform: scale(.9);
+                -webkit-transition: 0.3s transform cubic-bezier(0.37, 0.74, 0.15, 1.65), 0.3s opacity;
+                -o-transition: 0.3s transform cubic-bezier(0.37, 0.74, 0.15, 1.65), 0.3s opacity;
+                transition: 0.3s transform cubic-bezier(0.37, 0.74, 0.15, 1.65), 0.3s opacity;
+            }
+
+            .skills-interests:hover:before {
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                -o-transform: scale(1);
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .chart {
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background-color: #fff;
+            padding: 1em 2em;
+            display: none;
+        }
+        .chart-active .chart {
+            display: block;
+            opacity: 1;
+            -webkit-transition: transform .3s ease, opacity .3s;
+            -o-transition: transform .3s ease, opacity .3s;
+            transition: transform .3s ease, opacity .3s;
+        }
+        .chart-active.animate .chart {
+            -webkit-transform: translateX(10%);
+            -ms-transform: translateX(10%);
+            -o-transform: translateX(10%);
+            transform: translateX(10%);
+            opacity: 0;
+        }
+        .chart__boom {
+            height: 90%;
+        }
+        .chart__title {
+            text-align: center;
+        }
+        .x {
+            background: url(assets/img/close.svg) 50% 50% no-repeat #f2dbc3;
+            background-size: 60%;
+            height: 40px;
+            width: 40px;
+            padding: 10px;
+            border-radius: 50%;
+            display: block;
+            position: fixed;
+            top: 1em; right: 1em;
+            cursor: pointer;
+        }
+        .x:before {
+            content:'';
+            background: url(assets/img/close.svg) 50% 50% no-repeat #fcae5c;
+            background-size: 60%;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0; left: 0;
+            border-radius: 50%;
+            opacity: 0;
+            -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+            -o-transform: scale(0);
+            transform: scale(0);
+            -webkit-transition: 0.3s transform cubic-bezier(0.37, 0.74, 0.15, 1.65), 0.3s opacity;
+            -o-transition: 0.3s transform cubic-bezier(0.37, 0.74, 0.15, 1.65), 0.3s opacity;
+            transition: 0.3s transform cubic-bezier(0.37, 0.74, 0.15, 1.65), 0.3s opacity;
+        }
+
+        .x:hover:before {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        .social__twitter,
+        .social__github,
+        .social__dribbble,
+        .social__codepen,
+        .social__linkedin {
+            display:block;
+            width: 100%;
+            height: 100%;
+        }
+        .social__twitter {
+            background: url(assets/img/twitter.svg);
+        }
+        .social__github {
+            background: url(assets/img/github.svg);
+        }
+        .social__dribbble {
+            background: url(assets/img/dribbble.svg);
+        }
+        .social__codepen {
+            background: url(assets/img/codepen.svg);
+        }
+        .social__linkedin {
+            background: url(assets/img/linkedin.svg);
+        }
+        .sr-only {
+            border: 0;
+            font: 0/0 a;
+            text-shadow: none;
+            color: transparent;
+            background-color: transparent;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/nv.d3.min.css">
+    <script src="https://use.typekit.net/tlu4zio.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+<body>
+    <h1>Sean<br>Michael</h1>
+    <h2 class="subtitle">Software Engineer</h2>
+    <p>I am a Software Engineer with a track record for building high-quality digital products, forming positive client relationships, and delivering on-time. Although my expertise are anchored in front end development, I'm a voracious learner of new technologies and have gained invaluable professional experience in both design and back end development. When not at my day job, you can usually find me running long distances, traveling in Latin America, or building my own projects at a local coffee shop.</p>
+    <a class="skills-interests" id="js-chart-activate" href="#">Skills + Interests</a>
+    <ul class="social">
+        <li><a href="https://twitter.com/senorsean11" target="_blank" class="social__twitter sr-only">Twitter</a></li>
+        <li><a href="https://github.com/seansean11" target="_blank" class="social__github sr-only">Github</a></li>
+        <li><a href="https://dribbble.com/SenorSean" target="_blank" class="social__dribbble sr-only">Dribble</a></li>
+        <li><a href="http://codepen.io/seansean11/" target="_blank" class="social__codepen sr-only">Codepen</a></li>
+        <li><a href="https://www.linkedin.com/in/seankmichael" target="_blank" class="social__linkedin sr-only">LinkedIn</a></li>
+    </ul>
+
+    <div class="chart">
+        <span class="x" id="js-chart-destroy"><span class="sr-only">close</span></span>
+        <h2 class="chart__title">Skills + Interests</h2>
+        <div class="chart__boom" id="js-boom"><svg></svg></div>
+    </div>
+
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="assets/js/nv.d3.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
